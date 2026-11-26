@@ -1,0 +1,63 @@
+/* Polish: motion, hover effects, headings, FAQ, form, skip link, back-to-top. Loaded last. */
+::selection{background:#f2c879;color:#2b1a12}
+
+/* skip link (keyboard users) */
+.skip-link{position:absolute;left:12px;top:-60px;z-index:100;background:#2b1a12;color:#fff;padding:10px 16px;border-radius:0 0 10px 10px;text-decoration:none;font-weight:700;transition:top .2s}
+.skip-link:focus{top:0}
+#home:focus{outline:none}
+
+/* nav shadow once the page is scrolled */
+nav{transition:box-shadow .3s}
+nav.scrolled{box-shadow:0 6px 22px rgba(43,26,18,.16)}
+
+/* hero entrance */
+@keyframes rise{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+.hero .wrap>*{animation:rise .8s cubic-bezier(.2,.7,.2,1) both}
+.hero .wrap>*:nth-child(2){animation-delay:.1s}.hero .wrap>*:nth-child(3){animation-delay:.2s}
+.hero .wrap>*:nth-child(4){animation-delay:.3s}.hero .wrap>*:nth-child(n+5){animation-delay:.4s}
+
+/* scroll reveal (classes are added by public/js/ui/polish.js) */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+
+/* section headings get a small saffron-to-rose bar */
+#home section h2:after,#contact h2:after{content:'';display:block;width:64px;height:4px;border-radius:4px;margin-top:12px;background:linear-gradient(90deg,#e5a52f,#c0472b)}
+#faq h2:after{margin-left:0}
+
+/* buttons and cards respond to hover */
+.btn{transition:transform .2s,box-shadow .2s,background-color .2s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 8px 18px rgba(43,26,18,.22)}
+.btn:active{transform:translateY(0)}
+.quick-grid>a{transition:transform .25s,box-shadow .25s}
+.quick-grid>a:hover{transform:translateY(-4px);box-shadow:0 14px 28px rgba(43,26,18,.14)}
+#dgrid .dest,#sgrid .dest{transition:transform .25s,box-shadow .25s}
+
+/* FAQ: warm background, each question is its own card with a + / − marker */
+#faq{background:#f8eedd!important}
+#faq details{background:#fffdf8;border:1px solid #e7d8c3;border-radius:14px;margin:0 0 12px;padding:0;box-shadow:0 2px 8px rgba(43,26,18,.05);transition:box-shadow .25s,border-color .25s}
+#faq details[open]{border-color:#e5a52f;box-shadow:0 10px 24px rgba(43,26,18,.1)}
+#faq summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:16px 20px;color:#2b1a12;font-weight:700}
+#faq summary::-webkit-details-marker{display:none}
+#faq summary:after{content:'+';flex:none;width:28px;height:28px;border-radius:50%;display:grid;place-items:center;background:#f3e2c4;color:#8c3b22;font-size:1.3rem;line-height:1;transition:transform .25s,background-color .25s}
+#faq details[open] summary:after{content:'−';background:#e5a52f;color:#2b1a12}
+#faq details p{margin:0;padding:0 20px 18px;color:#5b4a3b}
+
+/* contact form: clearer focus */
+#f input,#f select,#f textarea{transition:border-color .2s,box-shadow .2s}
+#f input:focus,#f select:focus,#f textarea:focus{border-color:#e5a52f;box-shadow:0 0 0 3px rgba(229,165,47,.35);outline:none}
+
+/* back to top */
+#to-top{position:fixed;right:18px;bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:35;width:46px;height:46px;border-radius:50%;border:0;cursor:pointer;background:#6b2c1c;color:#fff;font-size:1.3rem;line-height:1;box-shadow:0 8px 20px rgba(0,0,0,.28);opacity:0;visibility:hidden;transform:translateY(12px);transition:opacity .25s,transform .25s,visibility .25s}
+#to-top.show{opacity:1;visibility:visible;transform:none}
+#to-top:hover{background:#8c3b22}
+
+@media(prefers-reduced-motion:reduce){
+  .hero .wrap>*{animation:none}
+  .reveal{opacity:1;transform:none;transition:none}
+  .btn,.quick-grid>a,#to-top{transition:none}
+}
+
+/* About section: single column now that the photo placeholder is gone */
+#about .about{grid-template-columns:1fr!important}
+.form-note{margin:-4px 0 0;font-size:.85rem;color:#6b5646}
+#msg a{color:#8c3b22;font-weight:700}

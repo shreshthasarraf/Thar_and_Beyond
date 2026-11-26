@@ -1,0 +1,3 @@
+/* Extra sections added to city and group pages */
+function more(s){var x=X[s];if(!x)return'';return'<div class="g4"><div class="box"><b>Geography and area</b><br>'+x[0]+'</div><div class="box"><b>What to eat</b><br>'+x[1]+'</div><div class="box"><b>Culture, music and dance</b><br>'+x[2]+'</div><div class="box"><b>Festivals</b><br>'+x[3]+'</div></div><h3 style="margin-top:28px">Activities here</h3><div class="links">'+x[4].map(function(a){return'<a href="#act-'+a+'">'+AC(a)[1]+'</a>'}).join('')+'</div>'}
+D.forEach(function(d){var o=P[d[0]];P[d[0]]=function(){return o().replace('<h2 style="margin-top:36px">Places to visit</h2>',more(d[0])+'<h2 style="margin-top:36px">Places to visit</h2>')}});

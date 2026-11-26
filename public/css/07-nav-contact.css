@@ -1,0 +1,17 @@
+/* Navigation and contact colours matched to the theme */
+/* ===== Nav + Contact colours, matched to the Rajasthan theme ===== */
+nav{background:#fff8ea!important;color:#3c2923!important;border-bottom:3px solid #d9a441!important;box-shadow:0 4px 16px rgba(75,41,37,.12)!important}
+nav a.brand{color:#6b2d20!important}nav a.brand span{color:#b4532f!important}
+.desktop-links a{color:#4b2925!important}.desktop-links a:hover{color:#b4532f!important}
+.nav-cta{background:#6b2d20!important;color:#fff4df!important}.nav-cta span{color:#f3c46b!important}.nav-cta:hover{background:#8f3b27!important}
+#burger{background:#6b2d20!important}#burger i{background:#fff4df!important}
+#drawer{background:#fff8ea!important;color:#3c2923!important}#drawer a{color:#4b2925!important;border-color:#e6d3b3!important}#drawer a:hover{color:#b4532f!important}#drawer button{color:#4b2925!important}
+#contact{background:linear-gradient(145deg,#5e2a20 0%,#8f3b27 55%,#b4532f 100%)!important;color:#fff4df!important}
+#contact h2{color:#fff4df!important}#contact .lead{color:#fbe6c8!important}
+#contact form{background:#fffaf1!important;border:1px solid #e6d3b3!important;box-shadow:0 18px 44px rgba(40,15,8,.35)!important}
+#contact .btn{background:#d9a441!important;color:#2b1a14!important}
+footer{background:#3a1f1b!important;color:#f3dfc2!important}
+.dest-shade{position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(0deg,rgba(20,12,9,.88) 0%,rgba(20,12,9,.52) 45%,rgba(20,12,9,.06) 80%)}
+.slide-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+.slide-shade{position:absolute;inset:0;z-index:0;pointer-events:none;background:linear-gradient(0deg,rgba(20,12,9,.9) 0%,rgba(20,12,9,.5) 50%,rgba(20,12,9,.05) 85%)}
+.slide .slide-kicker,.slide .slide-open{position:relative;z-index:1}

@@ -1,0 +1,26 @@
+/* Destination photography, activity directory and Kathputli page transition */
+/* Destination photography, activity directory and Kathputli page transitions */
+#places .dest{background-size:cover!important;background-position:center!important}
+.banner{background-size:cover!important;background-position:center!important;min-height:290px}
+.activity-showcase{background:linear-gradient(145deg,#f5ead8,#ead9bd);position:relative;overflow:hidden}
+.activity-showcase:before{content:"";position:absolute;inset:0;opacity:.13;background-image:linear-gradient(90deg,transparent 49%,#9b6b3d 50%,transparent 51%),linear-gradient(#9b6b3d 1px,transparent 1px);background-size:54px 54px;pointer-events:none}
+.activity-showcase .wrap{position:relative;z-index:1}
+.activity-card{min-height:205px!important}
+.anchor-alias{display:block;position:relative;top:-80px;visibility:hidden}
+#experiences .eyebrow{letter-spacing:.16em;font-weight:800}
+#experiences .stage{height:370px;overflow:visible}
+#experiences .slide{cursor:pointer}
+#experiences .slide.on{box-shadow:0 22px 48px rgba(0,0,0,.32);outline:2px solid rgba(246,211,145,.75);outline-offset:3px}
+#puppet-transition{position:fixed;inset:0;z-index:9999;display:grid;place-items:center;background:radial-gradient(ellipse at center,#4c2835 0%,#1b1727 76%);opacity:0;visibility:hidden;pointer-events:none;transition:opacity .22s ease,visibility .22s ease}
+#puppet-transition.playing{opacity:1;visibility:visible}
+#puppet-transition svg{width:min(620px,92vw);height:auto;overflow:visible}
+#puppet-transition .string{stroke:#e9d9bd;stroke-width:1.5;stroke-dasharray:3 5;animation:stringSway .55s ease-in-out infinite alternate}
+#puppet-transition .puppet{transform-box:fill-box;transform-origin:50% 10%;animation:puppetDance .58s ease-in-out infinite alternate}
+#puppet-transition .puppet.right{animation-delay:-.29s}
+#puppet-transition .hand{transform-box:fill-box;transform-origin:50% 0%;animation:handSway .7s ease-in-out infinite alternate}
+#puppet-transition .caption{fill:#f4dfb5;font:600 13px Mukta, sans-serif;letter-spacing:3px}
+@keyframes puppetDance{from{transform:rotate(-9deg) translateY(0)}to{transform:rotate(10deg) translateY(-8px)}}
+@keyframes handSway{from{transform:rotate(-7deg)}to{transform:rotate(8deg)}}
+@keyframes stringSway{from{transform:rotate(-2deg)}to{transform:rotate(2deg)}}
+@media(max-width:760px){#experiences .stage{height:320px}.activity-showcase{padding:52px 16px}.activity-card{min-height:180px!important}.banner{min-height:250px;padding:54px 18px 76px}}
+@media(prefers-reduced-motion:reduce){#puppet-transition .puppet,#puppet-transition .hand,#puppet-transition .string{animation:none}}

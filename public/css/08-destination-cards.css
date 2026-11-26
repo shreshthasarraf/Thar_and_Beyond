@@ -1,0 +1,32 @@
+/* "Where we take you": photo on top, name and tagline in a text panel below the photo.
+   Loaded last so it overrides the earlier overlay-style card rules. */
+#dgrid{--photo-h:190px}
+#dgrid .dest{
+  padding:0!important;min-height:0!important;justify-content:flex-start;align-items:stretch;text-align:left;
+  background-color:#fffdf8!important;background-image:none!important;
+  border:1px solid #e7d8c3;border-radius:16px!important;overflow:hidden;
+  box-shadow:0 8px 22px rgba(35,42,37,.12)!important;clip-path:none!important
+}
+#dgrid .dest[hidden]{display:none!important}
+#dgrid .dest:before,#dgrid .dest:after,#dgrid .dest .dest-shade{content:none!important;display:none!important}
+#dgrid .dest:hover{box-shadow:0 18px 34px rgba(35,42,37,.22)!important}
+
+/* the photo */
+#dgrid .dest .dest-photo{position:relative;inset:auto;display:block;flex:none;width:100%;height:var(--photo-h)}
+
+/* if a photo fails to load, show a plain coloured block in its place */
+#dgrid .dest.photo-fallback{
+  background-image:linear-gradient(160deg,#a96b43,#2a0f4d)!important;
+  background-size:100% var(--photo-h)!important;background-repeat:no-repeat!important;background-position:top!important
+}
+#dgrid .dest.photo-fallback .dest-copy{margin-top:var(--photo-h)}
+
+/* the text placeholder under the photo */
+#dgrid .dest .dest-copy{
+  position:relative;z-index:2;flex:1;display:block;
+  background:#fffdf8;border-top:4px solid #e5a52f;padding:14px 16px 18px;text-align:left
+}
+#dgrid .dest .dest-copy h3{color:#2b1a12!important;text-shadow:none;margin:0 0 4px;font-size:clamp(1.2rem,1.8vw,1.5rem)}
+#dgrid .dest .dest-copy span{color:#6b5646!important;text-shadow:none;opacity:1;font-size:.92rem;line-height:1.4}
+
+@media(max-width:760px){#dgrid{--photo-h:130px}#dgrid .dest .dest-copy{padding:10px 12px 14px}#dgrid .dest .dest-copy h3{font-size:1.05rem}#dgrid .dest .dest-copy span{font-size:.78rem}}

@@ -1,0 +1,32 @@
+/* Final Rajasthan palette and compact activity directory */
+/* Final Rajasthan palette and compact activity directory */
+:root{--bg:#fbf5e9;--alt:#f0e2cb;--ink:#3c2923;--mute:#756052;--blue:#93452f;--saffron:#d9a441;--rose:#a64d3b;--card:#fffaf1;--line:#dfc8a8;--night:#482923;color-scheme:light}
+body{background:#fbf5e9;color:#3c2923}
+nav{background:#4b2925!important;color:#fff4df!important;border-bottom:1px solid rgba(228,190,125,.35)}
+nav a.brand{color:#f3d49a!important}#burger{background:#c8753d!important}#burger i{background:#fff5e5!important}
+#drawer{background:#4b2925!important}#drawer a{border-color:#775044!important}
+.hero{background-image:linear-gradient(90deg,rgba(62,34,27,.78),rgba(62,34,27,.30) 58%,rgba(62,34,27,.08)),url('https://images.unsplash.com/photo-1599661046827-dacff0c0f09a?auto=format&fit=crop&w=2200&q=88')!important;background-size:cover!important;background-position:center 48%!important}
+#experiences{background:linear-gradient(145deg,#6b3028 0%,#8b4931 52%,#5b3428 100%)!important;color:#fff2dc!important}
+#experiences h2{color:#fff0d6!important}#experiences .lead{color:#f2ddc1!important}
+#experiences .slide{background:linear-gradient(160deg,rgba(91,45,34,.86),rgba(48,31,27,.94))!important;border:1px solid rgba(239,197,124,.6)!important;color:#fff2dc!important}
+#experiences .slide h3{color:#fff1d9!important}#experiences .slide p{color:#f0dcc3!important}#experiences .slide-kicker,#experiences .slide-open{color:#f0c56e!important}
+#experiences .ctl button{border-color:#edc16b!important;color:#fff0d5!important;background:rgba(71,36,29,.65)!important}
+.activity-showcase{background:linear-gradient(135deg,#f5e8d2,#ead4b5)!important;color:#3c2923!important;padding-top:42px!important;padding-bottom:42px!important}
+.activity-showcase h2{color:#713b2d!important}.activity-showcase .lead{display:none}
+.activity-bar{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:16px;padding:12px 14px;background:#fff8eb;border:1px solid #ddc39b;border-radius:16px;box-shadow:0 8px 24px rgba(80,48,31,.08)}
+.activity-bar a{display:inline-flex;align-items:center;padding:8px 13px;border-radius:999px;background:#f0dfc4;color:#6b382b;text-decoration:none;font-weight:700;font-size:.94rem}
+.activity-bar a:hover{background:#e5c58e}.activity-bar #showActivities{margin-left:auto;border-color:#9a573e;color:#793f2f;background:transparent;white-space:nowrap}
+#activityGrid[hidden]{display:none!important}#activityGrid:not([hidden]){margin-top:18px;grid-template-columns:repeat(3,minmax(0,1fr))}
+#places .dest{position:relative;overflow:hidden;background:#a96b43!important;isolation:isolate}
+.dest-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;transition:transform .55s ease}
+#places .dest:after{content:'';position:absolute;inset:0;background:linear-gradient(0deg,rgba(38,25,21,.82),rgba(38,25,21,.08) 78%);z-index:1;pointer-events:none}
+.dest-copy{position:relative;z-index:2;display:block;color:#fff5e6}.dest-copy h3{color:#fff5e6!important}.dest:hover .dest-photo{transform:scale(1.06)}
+.banner{background-color:#9a5b3e!important;background-size:cover!important;background-position:center!important;color:#fff4df!important}.banner h1,.banner p,.banner a{color:#fff4df!important;text-shadow:0 2px 12px rgba(0,0,0,.35)}
+#puppet-transition{background:radial-gradient(ellipse at center,#a75e3d 0%,#63362c 68%,#3f2925 100%)!important}
+#puppet-transition .hand{transform-box:fill-box;transform-origin:50% 10%;animation:handSway .55s ease-in-out infinite alternate}
+#puppet-transition .hand.right{animation-delay:-.25s}
+#puppet-transition .puppet{transform-box:fill-box;transform-origin:50% 5%;animation:puppetDance .52s ease-in-out infinite alternate}
+#puppet-transition .puppet.right{animation-delay:-.26s}
+#puppet-transition .caption{fill:#f6dfb7;font:700 14px Mukta,sans-serif;letter-spacing:3px}
+@media(max-width:700px){.activity-bar{gap:7px;padding:10px}.activity-bar a{font-size:.82rem;padding:7px 10px}.activity-bar #showActivities{margin-left:0;width:100%}#activityGrid:not([hidden]){grid-template-columns:repeat(2,minmax(0,1fr))}#puppet-transition svg{width:96vw}}
+@media(prefers-reduced-motion:reduce){.dest-photo{transition:none}#puppet-transition .hand,#puppet-transition .puppet{animation:none}}

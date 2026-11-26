@@ -1,0 +1,2 @@
+/* Theme chips (C) */
+var C=[["Education trips","Learning-led itineraries for schools and colleges"],["Nightlife","Rooftop dinners, folk evenings, city night walks"],["Museums","Palace museums, miniature and textile collections"],["History","Forts, battlefields, stepwells, cenotaphs"],["Architecture","Havelis, jharokhas, Rajput and Indo-Islamic design"],["Art and craft","Miniature painting, block printing, blue pottery"],["Food","Dal baati, laal maas, kachori, Bikaneri sweets"],["Spiritual","Ajmer, Nathdwara, Pushkar"]];
